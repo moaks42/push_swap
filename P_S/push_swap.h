@@ -17,14 +17,14 @@
 # include "libft/libft.h"
 
 /*circular doubly linked list, stack*/
-typedef struct t_node
+typedef struct s_node
 {
 	int				value;
-	struct t_node	*next;
-	struct t_node	*previous;
+	struct s_node	*next;
+	struct s_node	*previous;
 }	t_node;
 
-typedef struct t_stack
+typedef struct s_stack
 {
 	int		size;
 	t_node	*top;
