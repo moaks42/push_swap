@@ -63,4 +63,8 @@ void	rrr(t_stack *a, t_stack *b, int print);
 //disorder metric
 double	compute_disorder(const t_stack *a);
 
+//radix sort
+void  	assign_rank(t_stack *a);
+void	radix_sort(t_stack *a, t_stack *b);
+
 #endif
