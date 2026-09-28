@@ -43,3 +43,38 @@ int	fill_stack_a(t_stack *a, char **argv, int argc, int mode)
 	}
 	return (1);
 }
+
+void	attach_node_at_bottom(t_stack *stack, t_node *node)
+{
+	if (!stack->top)
+	{
+		node->next = node;
+		node->prev = node;
+		stack->top = node;
+	}
+	else
+	{
+		node->next = stack->top;
+		node->prev = stack->top->prev;
+		stack->top->prev->next = node;
+		stack->top->prev = node;
+	}
+	stack->size++;
+}
+
+void	free_stack(t_stack *stack)
+{
+	t_node	*current;
+	t_node	*next;
+
+	if (!stack->top)
+		return ;
+	current = stack->top;
+	do {
+		next = current->next;
+		free(current);
+		current = next;
+	} while (current != stack->top);
+	stack->top = NULL;
+	stack->size = 0;
+}
