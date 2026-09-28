@@ -30,9 +30,22 @@ typedef struct s_stack
 	t_node	*top;
 }	t_stack;
 
+typedef enum s_mode
+{
+    NO_FLAG = 0,
+    BENCH,
+    SIMPLE,
+    MEDIUM,
+    COMPLEX,
+    ADAPTIVE
+}
+
 // new node and new stack
 t_node	*new_node(int value);
 t_stack	new_stack(int size, t_node *top);
+int		fill_stack_a(t_stack *a, char **argv, int argc, int mode);
+void	attach_node_at_bottom(t_stack *stack, t_node *node);
+void	stack_free(t_stack *stack);
 
 //operations
 void	sa(t_stack *a, int print);
