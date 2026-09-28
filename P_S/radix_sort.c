@@ -48,7 +48,7 @@ void  radix_sort(t_stack *a, t_stack *b)
   int  bits;
   int  bit;
 
-  assign_ranks(a);
+  assign_rank(a);
   bits = max_bits(a->size);
   bit = 0;
   while (bit < bits)
