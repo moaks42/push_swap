@@ -16,6 +16,7 @@ SRC :=	new_stack.c \
         stack_rotate.c \
         stack_reverse_rotate.c \
         stacl_swap.c \
+		radix_sort.c \
 
 OBJ := $(SRC:.c=.o)
 
