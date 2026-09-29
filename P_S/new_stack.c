@@ -21,7 +21,7 @@ t_stack	new_stack(int size, t_node *top)
 	return (stack);
 }
 
-static int	ft_atol(const char *nptr, int *value)
+static int	safe_atoi(const char *nptr, int *value)
 {
 	int	i;
 	int	sign;
@@ -62,7 +62,7 @@ int	fill_stack_a(t_stack *a, char **argv, int argc, int mode)
         i = 2;
 	while (i < argc)
 	{
-		if (!ft_atol(argv[i], &value))
+		if (!safe_atoi(argv[i], &value))
 			return (0);
 		node = new_node(value);
 		if (!node)
