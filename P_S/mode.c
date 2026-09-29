@@ -14,15 +14,15 @@
 
 int get_mode(char *argv1)
 {
-    if (ft_strncmp(argv1, "--bench"))
+    if (ft_strcmp(argv1, "--bench"))
         return (BENCH);
-    if (ft_strncmp(argv1, "--simple"))
+    if (ft_strcmp(argv1, "--simple"))
         return (SIMPLE);
-    if (ft_strncmp(argv1, "--medium"))
+    if (ft_strcmp(argv1, "--medium"))
         return (MEDIUM);
-    if (ft_strncmp(argv1, "--complex"))
+    if (ft_strcmp(argv1, "--complex"))
         return (COMPLEX);
-    if (ft_strncmp(argv1, "--adaptive"))
+    if (ft_strcmp(argv1, "--adaptive"))
         return (ADAPTIVE);
     return (NO_FLAG);
 }
