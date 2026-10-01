@@ -22,7 +22,7 @@ static void  dispatcher(t_stack *a, t_stack *b, int mode, double disorder)
         else if (disorder > 0.2 && disorder < 0.5)
             //medium sort
         else if (disorder > 0.5)
-            //complex sort
+            radix_sort(&a,&b);
     }
     else if (mode == BENCH)
         //bude doplneno
@@ -31,7 +31,7 @@ static void  dispatcher(t_stack *a, t_stack *b, int mode, double disorder)
     else if (mode == MEDIUM)
         //medium
     else if (mode == COMPLEX)
-        //complex
+        radix_sort(&a,&b);
     else if (mode == ADAPTIVE)
         //adaptive
 }
