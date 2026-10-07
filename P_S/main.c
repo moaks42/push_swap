@@ -15,7 +15,7 @@
 static void  dispatcher(t_stack *a, t_stack *b, int mode, double disorder)
 {
     if (mode == NO_FLAG)
-        // use disorder
+        // use disorder aka adaptive
     {
         if (disorder < 0.2)
             selection_sort(a,b); 
@@ -32,8 +32,6 @@ static void  dispatcher(t_stack *a, t_stack *b, int mode, double disorder)
         //medium
     else if (mode == COMPLEX)
         radix_sort(a,b);
-    else if (mode == ADAPTIVE)
-        //adaptive
 }
 
 int	main(int argc, char **argv)
